@@ -4,7 +4,7 @@
   <title><![CDATA[KPLI Jakarta]]></title>
   <link href="http://Linuxjak.github.com/atom.xml" rel="self"/>
   <link href="http://Linuxjak.github.com/"/>
-  <updated>2013-06-24T22:11:40+07:00</updated>
+  <updated>2013-06-24T22:43:34+07:00</updated>
   <id>http://Linuxjak.github.com/</id>
   <author>
     <name><![CDATA[KPLI Jakarta]]></name>
@@ -19,7 +19,7 @@
     <updated>2013-06-24T22:00:00+07:00</updated>
     <id>http://Linuxjak.github.com/blog/2013/06/24/workshop-linuxjak</id>
     <content type="html"><![CDATA[<p>Hai semua&#8230; KPLI Jakarta pada kesempatan kali ini akan mengadakan workshop perfect web server with nginx. Dalam workshop ini selain membahas seputar nginx juga akan membahas
-bagaimana implementasi nginx dalam dunia kerja.</p>
+bagaimana implementasi nginx dalam dunia kerja. <!--more--></p>
 
 <p><img src="http://Linuxjak.github.com/images/pesantrend.jpg"></p>
 
@@ -32,11 +32,16 @@ bagaimana implementasi nginx dalam dunia kerja.</p>
 <li>Pukul : 13:00 wib s/d 18:00 wib</li>
 <li>Tempat : Sekretariat KPLI Jakarta. Graha Assuryaniyah Lt. 4 Jln. Kampung Melayu Kecil III no. 46-47, tebet, jakarta selatan.</li>
 <li>Biaya : Rp. 200.000,-/peserta (Modul, Sertifikat dan Konsumsi buka puasa)</li>
-<li>Info pembayaran:</li>
+<li><p>Form konfirmasi pembayaran:</p>
+
+<pre><code>  Bank BCA
+  Nomor: 5490-158-334
+  AN: Ali Imron Maulana
+</code></pre></li>
 </ul>
 
 
-<div class="google-form-wrapper"><p class='success-msg'>Terimakasih telah melakukan pendaftaran workshop linuxjak </p><form action="https://docs.google.com/spreadsheet/formResponse?formkey=dGV5dHdZY2N6Y1gwbnJKenJ5X2htaFE6MQ&amp;theme=0AX42CRMsmRFbUy1kN2NjY2Y0Mi1iYWFmLTQxMWMtYjM0NC04NmZmYTIwZDRkMGQ&amp;embedded=true&amp;ifq" method="POST" id="ss-form">
+<div class="google-form-wrapper"><p class='success-msg'>Terimakasih telah melakukan pendaftaran workshop linuxjak dan simpan bukti transfer untuk registrasi ulang </p><form action="https://docs.google.com/spreadsheet/formResponse?formkey=dGV5dHdZY2N6Y1gwbnJKenJ5X2htaFE6MQ&amp;theme=0AX42CRMsmRFbUy1kN2NjY2Y0Mi1iYWFmLTQxMWMtYjM0NC04NmZmYTIwZDRkMGQ&amp;embedded=true&amp;ifq" method="POST" id="ss-form">
 
 
 <br><div class="errorbox-good">
@@ -144,11 +149,6 @@ Perempuan</label></li>
 </div></div>
 </form></div>
 
-
-<p>Info : Ali - 0812.1386.8766</p>
-
-<pre><code>   Aris - 021-49.666.586
-</code></pre>
 ]]></content>
   </entry>
   

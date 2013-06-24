@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | KPLI Jakarta]]></title>
+  <link href="http://Linuxjak.github.com/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://Linuxjak.github.com/"/>
+  <updated>2013-06-24T22:11:40+07:00</updated>
+  <id>http://Linuxjak.github.com/</id>
+  <author>
+    <name><![CDATA[KPLI Jakarta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Debian 7 - Kau Bukan Yang Dulu Lagi]]></title>
+    <link href="http://Linuxjak.github.com/blog/2013/05/08/debian-7/"/>
+    <updated>2013-05-08T02:56:00+07:00</updated>
+    <id>http://Linuxjak.github.com/blog/2013/05/08/debian-7</id>
+    <content type="html"><![CDATA[<p>Berbicara mengenai Debian Linux, secara pribadi jika seseorang menanyakan kepada saya mengapa menggunakan Debian Linux, adalah karena distribusi linux inilah yang saya gunakan pertama kali sebagai sistim operasi server. Keinginan menggunakan linux sebagai sistim operasi yang terkenal paling handal di kelas server membuat saya memilih Debian karena kemudahan untuk menggunakannya. Saya waktu itu hampir tidak percaya bahwa hanya dengan perintah apt-get dan sedikit saja konfigurasi, saya bisa membangun sebuah web server, lengkap dengan ftp server, php dan database mysql yang saya butuhkan.<!--more--></p>
+
+<p>Berawal dari Debian versi ke 5 kemudian Debian 6, saya sudah merasa nyaman untuk tetap menggunakan sistim operasi ini untuk server. Belum terpikir untuk menggunakannya sebagai sistim operasi desktop, apalagi setelah saya tau begitu ketatnya kontrol pengembang Debian terhadap aplikasi yang dipaketkan ke dalam sistim operasi ini (tentu saja untuk tetap menjaga kestabilan &amp; kehandalannya), jangan harap untuk mendapatkan aplikasi desktop terbaru yang belum melalui tahap ujicoba dan memenuhi beberapa standar perangkat lunak terbuka, sehingga saya lebih memilih Ubuntu sebagai sistim operasi desktop saya agar saya tetap mendapatkan pembaharuan aplikasi desktop yang biasa saya gunakan minimal setiap 6 bulan sekali.</p>
+
+<p>Saya hampir tidak pernah memikirkan pembaharuan dari Debian Linux. Saya pernah merasakan rentang waktu yang cukup lama versi ke 5 Debian untuk melalui proses pembaharuan ke versi ke 6, hingga seorang rekan saya di KPLI Jakarta memberi tau saya Debian versi ke 7 (wheezy) sudah dirilis, langsung saja saya “menuju tkp” untuk mengunduh versi terbaru tersebut, dan setelah melalui proses instalasi, Debian 7 - Kau memang bukan yang dulu lagi.</p>
+
+<p>Perubahan terbesar yang saya lihat adalah adanya dektop manager yang baru seperti gnome 3.4, kde 4.8 dan xfce 4.8 dan aplikasi open office yang sudah diganti dengan libreoffice (walau masih versi 3), di bawah ini beberapa tangkapan layar yang saya ambil menggunakan gnome desktop manager.</p>
+
+<p><img src="/images/homedeb.png"></p>
+
+<p><img src="/images/officedeb.png"></p>
+
+<p><img src="/images/browsedeb.png"></p>
+
+<p><img src="/images/libredeb.png"></p>
+
+<p><img src="/images/placedeb.png"></p>
+
+<p>Beberapa pembaharuan baru selengkapnya bisa dilihat <a href="http://www.zdnet.com/the-new-debian-linux-7-0-is-now-available-7000014911/">disini</a></p>
+
+<p><img src="/images/keepcalmdebian.png"></p>
+
+<p>Sumber Gambar Situs Resmi Debian</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Kesan Pertama Dengan Ubuntu Studio 13.04]]></title>
+    <link href="http://Linuxjak.github.com/blog/2013/04/26/kesan-pertama-dengan-ubuntu-studio-13-dot-04/"/>
+    <updated>2013-04-26T13:11:00+07:00</updated>
+    <id>http://Linuxjak.github.com/blog/2013/04/26/kesan-pertama-dengan-ubuntu-studio-13-dot-04</id>
+    <content type="html"><![CDATA[<p>Sebagai seorang penikmat multimedia yang biasa menggunakan berbagai macam aplikasi audio, video bahkan grafis, seiring dengan dirilisnya ubuntu dan berbagai variannya, tidak seperti yang lain yang mungkin langsung mencoba ubuntu versi terbaru 13.04 tersebut, pilihan saya untuk mencoba jatuh kepada varian ubuntu yang lain, tentu saja Ubuntu Studio yang sengaja dikembangkan untuk urusan multimedia, bagaimana kesan pertama saya?<!--more--></p>
+
+<p>Pertama kali mencoba saya sangat menyukai tema biru tua elegan yang dihadirkannya, kemudian saya mencoba melihat apa saja aplikasi yang sudah terpasang di dalamnya. Berikut ini beberapa hasil tangkapan layar saya selama menggunakan Ubuntu Studio 13.04 ini.</p>
+
+<ul>
+<li>Tampilan login yang elegan</li>
+</ul>
+
+
+<p><img src="/images/login.png"></p>
+
+<ul>
+<li>Desktop yang menawan</li>
+</ul>
+
+
+<p><img src="/images/desktop.png"></p>
+
+<ul>
+<li>Berbagai macam aplikasi audio yang sudah terpasang</li>
+</ul>
+
+
+<p><img src="/images/audio.png"></p>
+
+<ul>
+<li>Aplikasi video yang bertebaran</li>
+</ul>
+
+
+<p><img src="/images/video.png"></p>
+
+<ul>
+<li>Berbagai macam aplikasi grafis, photography &amp; publishing yang bisa digunakan</li>
+</ul>
+
+
+<p><img src="/images/graphic.png"></p>
+
+<p><img src="/images/publishing.png"></p>
+
+<p><img src="/images/photo.png"></p>
+
+<ul>
+<li>Tampilan direktori home yang juga menawan</li>
+</ul>
+
+
+<p><img src="/images/home.png"></p>
+
+<p>Memang ada yang kurang ketika menggunakan Ubuntu Studio 13.04 ini, dan saya tersadar kekurangan itu adalah aplikasi office yang biasa saya gunakan. Mudah saja, saya hanya perlu membuka software center untuk memasang Libreoffice untuk saya gunakan</p>
+
+<p><img src="/images/software.png"></p>
+
+<p>Terakhir, untuk keperluan menjelajah internet, seperti biasa, aplikasi firefox sudah tersedia, jangan lupa mengunjungi situs KPLI Jakarta, dan ceritakan pengalaman anda bersama Ubuntu atau varian linux yang anda gunakan, melalui form komentar di bawah ini.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FBMESSENGER - Chat Facebook Untuk Linux]]></title>
+    <link href="http://Linuxjak.github.com/blog/2013/04/20/fbmessenger-aplikasi-chat-facebook-untuk-linux/"/>
+    <updated>2013-04-20T18:36:00+07:00</updated>
+    <id>http://Linuxjak.github.com/blog/2013/04/20/fbmessenger-aplikasi-chat-facebook-untuk-linux</id>
+    <content type="html"><![CDATA[<p>Bagi pengguna linux, anda mungkin sudah mengenal chat client pidgin yang memudahkan anda untuk selalu terhubung dengan berbagai macam akun chat anda seperti yahoo messenger, google talk, bahkan facebook. Dengan kemudahan seperti ini, anda bisa menyusun seluruh percakapan anda ke dalam sebuah jendela aplikasi. Bagi anda yang lebih menyukai layanan chat yang disediakan oleh facebook, anda mungkin tidak akan menemui fitur chat yang biasa anda gunakan pada aplikasi facebook seperti notikasi, friend request, friend updates dan pop up alert.<!--more--></p>
+
+<p>Seorang developer facebook yang tentu saja tahu betul fitur-fitur apa saja yang dimiliki facebook chat, membuat sebuah aplikasi chat yang serupa dengan facebook messenger yang biasa anda gunakan. Berikut ini merupakan langkah-langkah untuk menggunakan fbmessenger pada beberapa distribusi linux.</p>
+
+<ul>
+<li>Bagi pengguna Ubuntu Linux, tambahkan repositori di bawah ini</li>
+</ul>
+
+
+<p><code>
+sudo add-apt-repository ppa:nilarimogard/webupd8
+</code></p>
+
+<p>Update, kemudian instal fbmessenger</p>
+
+<p><code>
+sudo apt-get update
+sudo apt-get install fbmessenger
+</code></p>
+
+<p>Tampilan aplikasi fbmessenger pada ubuntu linux</p>
+
+<p><img src="/images/33.png"></p>
+
+<ul>
+<li>Bagi pengguna Arch Linux menggunakan AUR melalui <a href="https://aur.archlinux.org/packages/fbmessenger-git/">tautan ini</a></li>
+<li>Bagi distribusi linux yang lain, bisa menggunakan source code fbmessenger yang telah disertakan dengan skrip untuk membuat paket rpm &amp; debian melaui github <a href="https://github.com/oconnor663/linuxmessenger">di tautan ini</a></li>
+</ul>
+
+
+<p>Berikan pendapat anda yang telah menggunakan fbmessenger melalui form komentar di bawah ini.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jolicloud Desktop Environment Pada Ubuntu]]></title>
+    <link href="http://Linuxjak.github.com/blog/2013/04/20/menikmati-jolicloud-desktop-environment-pada-ubuntu-linux/"/>
+    <updated>2013-04-20T10:08:00+07:00</updated>
+    <id>http://Linuxjak.github.com/blog/2013/04/20/menikmati-jolicloud-desktop-environment-pada-ubuntu-linux</id>
+    <content type="html"><![CDATA[<p>Kabar baik bagi anda pengguna Ubuntu Linux, bagi anda yang ingin menggunakan dektop environment lain bagi Ubuntu anda, atau ingin menggunakan Jolicloud desktop environment sebagai alternatif bagi desktop environment anda, kini anda tidak perlu menginstal secara terpisah Jolicloud OS, karena sekarang anda bisa menikmati langsung Jolicloud OS dalam ubuntu anda.<!--more--></p>
+
+<p>Cukup menambahkan repository Jolicloud OS untuk menambahkan opsi Jolicloud dekstop environment bagi ubuntu anda, dengan perintah terminal di bawah ini</p>
+
+<p><code>
+sudo add-apt-repository ppa:jolicloud-team/ppa &amp;&amp; sudo apt-get update
+</code></p>
+
+<p>kemudian lakukan instalasi Jolicloud desktop environtment</p>
+
+<p><code>
+sudo apt-get install jolicloud-desktop-environment
+</code></p>
+
+<p>log out, kemudian anda akan menemui opsi desktop environment lain pada ubuntu anda</p>
+
+<p><img src="/images/11.png"></p>
+
+<p>Saat pertama kali menggunakan Jolicloud dekstop environment, anda akan diminta untuk membuat akun menggunakan email atau akun facebook anda untuk menyimpan konfigurasi Jolicloud desktop anda.</p>
+
+<p><img src="/images/12.png"></p>
+
+<p>Anda akan tetap bisa mengakses dokumen dan aplikasi yang biasa anda gunakan</p>
+
+<p><img src="/images/8.png"></p>
+
+<p><img src="/images/7.png"></p>
+
+<p>Jolicloud dekstop environment memudahkan anda untuk tetap terhubung dengan akun sosial media anda seperti facebook, youtube, instagram, bahkan layanan berbagai file seperti box dan dropbox</p>
+
+<p><img src="/images/9.png"></p>
+
+<p><img src="/images/10.png"></p>
+
+<p>Bagaimana, tertarik untuk menikmati Jolicloud desktop environment seperti kami? apa pendapat anda setelah menggunakan nya? Anda bisa menuliskan pengalaman anda menggunakan Jolicloud desktop environment tersebut melalui form komentar di bawah ini</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ada yang baru di GNOME 3.8]]></title>
+    <link href="http://Linuxjak.github.com/blog/2013/04/09/ada-yang-baru-di-gnome-3-dot-8/"/>
+    <updated>2013-04-09T18:32:00+07:00</updated>
+    <id>http://Linuxjak.github.com/blog/2013/04/09/ada-yang-baru-di-gnome-3-dot-8</id>
+    <content type="html"><![CDATA[<p>Gnome 3.8 terlihat sangat apik. Bagi anda yang penasaran dengan "hal-hal baru" yang ada di dalamnya, bisa mengobati penasaran nya dengan melihat video preview Gnome 3.8 ini.</p>
+
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/I-ynQojUtTw "></iframe></div></p>
+
+<p>Bagaimana menurut anda tampilan Gnome 3.8 yang akan datang ini? sampaikan pendapat anda di kolom komentar di bawah ini</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Instalasi Nginx Dengan PHP5 (PHP-FPM) &amp; MySQL Support Pada Fedora 18 - KPLI Jakarta</title>
+  <meta name="author" content="KPLI Jakarta">
+
+  
+  <meta name="description" content="Nginx (baca: engine x) adalah server HTTP dan Proxy dengan kode sumber terbuka yang bisa juga berfungsi sebagai proxy IMAP/POP3. Kode sumber nginx &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Linuxjak.github.com/blog/2013/01/29/instalasi-nginx-dengan-php5-php-fpm-and-mysql-support-pada-fedora-18/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="KPLI Jakarta" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // Avoid conflict with ender.js.
+    jQuery.noConflict();
+</script>
+<!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="logo">
+  	
+  	<div class="clear"></div>
+  </div>
+  <h1><a href="/">KPLI Jakarta</a></h1>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<ul class="main-navigation">
+<li><a href="/">Beranda</a></li>
+<li><a href="/about">Tentang Kami</a></li>
+<li><a href="http://linuxjak.github.com/blog/categories/linux/">Linux</a></li>
+<li><a href="http://linuxjak.github.com/blog/categories/programming/">Programming</a></li>
+<li><a href="http://linuxjak.github.com/blog/categories/serba-serbi/">Serba-serbi</a></li>
+<li><a href="http://linuxjak.github.com/blog/categories/lowongan/">Lowongan</a></li>
+<li><a href="http://linuxjak.web.id/blog/categories/agenda/">Agenda</a></li>
+<li><a href="/training">Training</a></li>
+<li><a href="/hubungi-kami">Hubungi Kami</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Instalasi Nginx Dengan PHP5 (PHP-FPM) &amp; MySQL Support Pada Fedora 18</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-29T11:35:00+07:00" pubdate data-updated="true">Jan 29<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Nginx (baca: engine x) adalah server HTTP dan Proxy dengan kode sumber terbuka yang bisa juga berfungsi sebagai proxy IMAP/POP3. Kode sumber nginx ditulis oleh seorang warga negara Rusia yang bernama Igor Sysoev pada tahun 2002 dan dirilis ke publik pada tahun 2004. Nginx terkenal karena stabil, memiliki tingkat performansi tinggi dan minim mengonsumsi sumber daya. Beberapa situs terkenal yang menggunakan Nginx adalah Wordpress, Fastmail, Ohloh, Sourceforge dan Github - Wikipedia.<!--more--></p>
+
+<p>Begitulah sekilas mengenai Nginx, sesuai judul artikel, pada artikel kali ini akan dibahas mengenai instalasi nginx, php5 dan mysql pada distribusi linux fedora 18.</p>
+
+<ul>
+<li>Yang pertama instal mysql 5</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum install mysql mysql-server</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Kemudian buat startup links untuk mysql agar mysql dan mysql server akan berjalan secara otomatis pada saat start-up sistim</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>systemctl enable mysqld.service
+</span><span class='line'>systemctl enable mysqld.service</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Instal nginx</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum install nginx</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Buat startup links untuk nginx</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>systemctl enable nginx.service
+</span><span class='line'>systemctl start nginx.service</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Instal php 5, php-fpm (fast process manager)</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum install php-fpm php-cli php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-magickwand php-mbstring php-mcrypt php-mssql php-shout php-snmp php-soap php-tidy</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Buat startup links untuk php-fpm</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>systemctl enable php-fpm.service
+</span><span class='line'>systemctl start php-fpm.service</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Secara Default php-fpm akan berjalan pada port 9000 sebagai daemon</p>
+
+<ul>
+<li>Konfigurasi nginx yang dibutuhkan ada pada direktori dibawah ini</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>etc/nginx/nginx.conf</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Secara default, nginx sudah bisa digunakan tanpa melakukan perubahan apapun pada file konfigurasi, seperti ketika melakukan instalasi web server menggunakan apache web server.</p>
+
+<ul>
+<li>Pastikan php 5 sudah berjalan dan terintegrasi dengan nginx, buat file info php yang akan menunjukan php file yang digunakan</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>touch vi /etc/nginx/info.php</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Isi dengan</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?php
+</span><span class='line'>phpinfo();
+</span><span class='line'>?&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Kemudian periksa apakah php 5 yang digunakan sudah terintegrasi dan bekerja dengan baik pada nginx dengan mengarahkan peramban anda pada tautan - http://localhost/info.php</p>
+
+<p><em>Selamat mencoba :-)</em></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">KPLI Jakarta</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-29T11:35:00+07:00" pubdate data-updated="true">Jan 29<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>Linux</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Linuxjak.github.com/blog/2013/01/29/instalasi-nginx-dengan-php5-php-fpm-and-mysql-support-pada-fedora-18/" data-via="kplijakarta" data-counturl="http://Linuxjak.github.com/blog/2013/01/29/instalasi-nginx-dengan-php5-php-fpm-and-mysql-support-pada-fedora-18/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/blog/2013/01/29/backtrack-linux-berubah-menjadi-kali-linux/" title="Previous Post: Backtrack Linux Berubah Menjadi Kali Linux">&laquo; Backtrack Linux Berubah Menjadi Kali Linux</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/blog/2013/03/23/menambahkan-limit-import-phpmyadmin/" title="Next Post: Menambahkan Limit Import PHPMyAdmin">Menambahkan Limit Import PHPMyAdmin &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/24/workshop-linuxjak/">Workshop Perfect Web Server with Nginx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/21/kopdar-mei-2013/">Kopdar dan Pelatihan Java bersama KPLI Jakarta</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/08/debian-7/">Debian 7 - Kau Bukan Yang Dulu Lagi</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/28/kpli-jakarta-and-kemitraan-dengan-ksl-di-jakarta/">KPLI Jakarta & Kemitraan Dengan KSL di Jakarta</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/26/anda-bertanya-kpli-jakarta-menjawab/">Anda Bertanya KPLI Jakarta Menjawab</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/26/kesan-pertama-dengan-ubuntu-studio-13-dot-04/">Kesan Pertama Dengan Ubuntu Studio 13.04</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/20/fbmessenger-aplikasi-chat-facebook-untuk-linux/">FBMESSENGER - Chat Facebook Untuk Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/20/menikmati-jolicloud-desktop-environment-pada-ubuntu-linux/">Jolicloud Desktop Environment Pada Ubuntu</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/09/ada-yang-baru-di-gnome-3-dot-8/">Ada yang baru di GNOME 3.8</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/23/menambahkan-limit-import-phpmyadmin/">Menambahkan Limit Import PHPMyAdmin</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kplijakarta", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/kplijakarta" class="twitter-follow-button" data-show-count="true">Follow @kplijakarta</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyleft &copy; 2013 - KPLI Jakarta -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'kplijakarta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Linuxjak.github.com/blog/2013/01/29/instalasi-nginx-dengan-php5-php-fpm-and-mysql-support-pada-fedora-18/';
+        var disqus_url = 'http://Linuxjak.github.com/blog/2013/01/29/instalasi-nginx-dengan-php5-php-fpm-and-mysql-support-pada-fedora-18/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

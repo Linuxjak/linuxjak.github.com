@@ -4,7 +4,7 @@
   <title><![CDATA[KPLI Jakarta]]></title>
   <link href="http://Linuxjak.github.com/atom.xml" rel="self"/>
   <link href="http://Linuxjak.github.com/"/>
-  <updated>2013-06-25T16:44:48+07:00</updated>
+  <updated>2013-06-27T11:01:52+07:00</updated>
   <id>http://Linuxjak.github.com/</id>
   <author>
     <name><![CDATA[KPLI Jakarta]]></name>
@@ -18,8 +18,8 @@
     <link href="http://Linuxjak.github.com/blog/2013/06/24/workshop-linuxjak/"/>
     <updated>2013-06-24T22:00:00+07:00</updated>
     <id>http://Linuxjak.github.com/blog/2013/06/24/workshop-linuxjak</id>
-    <content type="html"><![CDATA[<p>Hai semua&#8230; KPLI Jakarta pada kesempatan kali ini akan mengadakan workshop perfect web server with nginx. Dalam workshop ini selain membahas seputar nginx juga akan membahas
-bagaimana implementasi nginx dalam dunia kerja. <!--more--></p>
+    <content type="html"><![CDATA[<p>Hai semua&#8230; KPLI Jakarta pada kesempatan kali ini akan mengadakan workshop perfect web server with nginx dan selain itu akan ditambah dengan materi menggunakan Bind. Dalam workshop ini selain membahas seputar nginx juga akan membahas
+bagaimana implementasi nginx dalam dunia kerja. Sayang sekali jika kalian tidak ikut, ayo buruan daftar! :)<!--more--></p>
 
 <p><img src="http://Linuxjak.github.com/images/pesantrend.jpg"></p>
 
